@@ -1,8 +1,8 @@
-package golearning
+package main
 
 import "fmt"
 
-func main() {
+func golearning() {
 	fmt.Println("hello world")
 
 	var a int8 = 127              // -128 <> 127, 1 byte, 8 bit
@@ -47,7 +47,5 @@ func main() {
 
 	concat := fmt.Sprintf("My name is %s. And I am %d years old", name, age2)
 	fmt.Println(concat)
-
-
 
 }
