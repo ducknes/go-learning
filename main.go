@@ -1,4 +1,4 @@
-package main
+package golearning
 
 import "fmt"
 
@@ -48,6 +48,6 @@ func main() {
 	concat := fmt.Sprintf("My name is %s. And I am %d years old", name, age2)
 	fmt.Println(concat)
 
-	
+
 
 }
