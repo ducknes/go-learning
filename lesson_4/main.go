@@ -1,13 +1,16 @@
 package main
 
-import "fmt"
-import "github.com/mitchellh/mapstructure"
+import (
+	"fmt"
+
+	"github.com/mitchellh/mapstructure"
+)
 
 // Iterator for range and map struct
 
 type Point struct {
-	X int
-	Y int
+	X int `mapstructure:"xx"`
+	Y int `mapstructure:"yy"`
 }
 
 func (p Point) method() {
@@ -21,11 +24,17 @@ func main() {
 	// }
 
 	pointsMap := map[string]int{
-		"x": 1,
-		"y": 2,
+		"x": 123,
+		"y": 234,
 	}
 
+	for key, value := range pointsMap {
+		fmt.Println(key, value)
+	}
 
+	p1 := Point{}
+	mapstructure.Decode(pointsMap, &p1)
+	fmt.Println(p1)
 }
 
 func mapExample() {
