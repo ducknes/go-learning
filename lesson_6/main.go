@@ -39,8 +39,22 @@ func main() {
 
 	var a interface{} = "hello"
 
-	s := a.(string)
-	fmt.Println(s)
+	// s := a.(string)
+	// fmt.Println(s)
+
+	// s, ok := a.(string)
+	// fmt.Println(s, ok)
+
+	// f, ok := a.(float32)
+	// if ok {
+	// 	// use f
+	// 	fmt.Println(f, ok)
+	// }
+
+	switch a.(type) {
+	case int:
+		fmt.Println()
+	}
 }
 
 type otherStruct struct {
