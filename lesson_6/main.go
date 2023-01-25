@@ -37,23 +37,21 @@ func main() {
 	// 	fmt.Println("not nil")
 	// }
 
-	var a interface{} = "hello"
-
-	// s := a.(string)
-	// fmt.Println(s)
-
-	// s, ok := a.(string)
-	// fmt.Println(s, ok)
-
+	var a interface{} = 3.14
 	// f, ok := a.(float32)
 	// if ok {
 	// 	// use f
 	// 	fmt.Println(f, ok)
 	// }
-
 	switch a.(type) {
 	case int:
-		fmt.Println()
+		fmt.Println("a is int")
+	case string:
+		fmt.Println("a is string")
+	case bool:
+		fmt.Println("a is bool")
+	default:
+		fmt.Printf("unknown type %T\n", a)
 	}
 }
 
