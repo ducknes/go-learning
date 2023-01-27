@@ -28,6 +28,4 @@ func NewUser(fio, address, phone string) User {
 	return &u
 }
 
-func main() {
 
-}
