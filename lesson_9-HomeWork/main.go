@@ -18,16 +18,9 @@ func main() {
 	// go Delete(9, 3, ch)
 	strExp := "2+2,3+6,7*7,9/3"
 	go Calc(StrToSlice(strExp), ch)
-	// for i := range ch {
-	// 	fmt.Print(i, " ")
-	// 	count++
-	// 	fmt.Println(count)
-	// }
-
-	fmt.Print(" ", <-ch)
-	fmt.Print(" ", <-ch)
-	fmt.Print(" ", <-ch)
-	fmt.Print(" ", <-ch)
+	for i := range ch {
+		fmt.Print(i, " ")
+	}
 }
 
 func Add(a, b int, exit chan int) {
@@ -71,4 +64,5 @@ func Calc(expressions []string, exitChan chan int) {
 			exitChan <- num1 / num2
 		}
 	}
+	close(exitChan)
 }
