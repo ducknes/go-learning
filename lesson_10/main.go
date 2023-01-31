@@ -65,10 +65,11 @@ func main() {
 			for j := 0; j < 1000; j++ {
 				mu.Lock()
 				counter++
-				mu.Unlock() 
+				mu.Unlock()
 				// atomic.AddUint64(&counter, 1)
 			}
 		}()
+		main2()
 	}
 
 	wg.Wait()

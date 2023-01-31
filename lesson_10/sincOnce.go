@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-func main() {
+func main2() {
 	var once sync.Once
 	done := make(chan bool)
 
