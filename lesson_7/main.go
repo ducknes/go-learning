@@ -25,6 +25,7 @@ func main() {
 		return
 	}
 	fmt.Println("success")
+	main2()
 }
 
 func method1() *appError {
