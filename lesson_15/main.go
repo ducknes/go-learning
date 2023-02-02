@@ -101,3 +101,5 @@ func main() {
 	fmt.Println(value)
 
 }
+
+// Explain what is go.mod
